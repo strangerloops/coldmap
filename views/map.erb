@@ -1,0 +1,40 @@
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <script src="https://mapzen.com/tangram/tangram.min.js"></script>
+  <script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="/map.js"></script>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+</head>
+<body>
+  <div id="map">
+    <style>
+      #map {
+        height:   100%;
+        width:    100%;
+        position: absolute;
+      }
+    </style>
+  </div>
+  <div id="layer-toggle">
+    <input type="radio" name="map-layer" id="complaint-rate" checked> Heat complaints 2010-2015 per capita <br>
+    <input type="radio" name="map-layer" id="stabilization"> Percent of rent-stabilized housing <br>
+    <input type="radio" name="map-layer" id="income"> Income ($) <br>
+    <input type="radio" name="map-layer" id="white-change"> Factor change in share of white population 2010-2013
+  </div>
+  <div id="view-graph">
+    View graph
+  </div>
+  <div id="graph-modal" class="modal">
+    <div class="modal-content">
+      <label class="close" id="close-modal">x</label>
+      <div id="chart"></div>
+      <div id="chart-radios">
+        <input type="radio" name="graph-layer" id="graph-stabilization" checked> Percent of rent-stabilized housing <br>
+        <input type="radio" name="graph-layer" id="graph-income"> Income ($) <br>
+        <input type="radio" name="graph-layer" id="graph-white-change"> Factor change in share of white population 2010-2013
+      </div>
+    </div>
+  </div>
+</body>
