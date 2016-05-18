@@ -259,6 +259,10 @@ $(document).ready(function(){
     setModalWithStyle('income');
   });
 
+  $('#graph-rent-change').click(function(){
+    setModalWithStyle('rentChange');
+  });
+
   var modal = $('#graph-modal');
   var open = $("#view-graph");
   var close = $("#close-modal");
