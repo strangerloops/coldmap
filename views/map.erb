@@ -1,7 +1,7 @@
 <head>
   <link rel="stylesheet" href="style.css" />
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <script src="/leaflet.js"></script>
   <script src="https://mapzen.com/tangram/tangram.min.js"></script>
   <script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="/map.js"></script>
@@ -18,10 +18,10 @@
     </style>
   </div>
   <div id="layer-toggle">
-    <input type="radio" name="map-layer" id="complaint-rate" checked> Heat complaints 2010-2015 per capita <br>
-    <input type="radio" name="map-layer" id="stabilization"> Percent of rent-stabilized housing <br>
+    <input type="radio" name="map-layer" id="complaint-rate" checked> Heat complaints 2010-2016 per capita <br>
+    <input type="radio" name="map-layer" id="stabilization"> Share of housing that is rent stabilized <br>
     <input type="radio" name="map-layer" id="income"> Income ($) <br>
-    <input type="radio" name="map-layer" id="white-change"> Factor change in share of white population 2010-2013
+    <input type="radio" name="map-layer" id="rent-change"> Percent change in rent from 2005-2009 to 2010-2014
   </div>
   <div id="view-graph">
     View graph
@@ -31,9 +31,9 @@
       <label class="close" id="close-modal">x</label>
       <div id="chart"></div>
       <div id="chart-radios">
-        <input type="radio" name="graph-layer" id="graph-stabilization" checked> Percent of rent-stabilized housing <br>
+        <input type="radio" name="graph-layer" id="graph-stabilization" checked> Share of housing that is rent stabilized <br>
         <input type="radio" name="graph-layer" id="graph-income"> Income ($) <br>
-        <input type="radio" name="graph-layer" id="graph-white-change"> Factor change in share of white population 2010-2013
+        <input type="radio" name="graph-layer" id="graph-rent-change"> Percent change in rent from 2005-2009 to 2010-2014
       </div>
     </div>
   </div>
