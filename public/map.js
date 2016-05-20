@@ -38,7 +38,7 @@ function setModalWithStyle(graphStyle){
   var identifier;
   if(graphStyle === 'stabilization'){
     x = Object.keys(data).sort().map(function(k){return data[k];}).map(function(obj){return obj.stabilization;});
-    // xLabel = 'Share of housing that is rent stabilized';
+    xLabel = 'Share of housing that is rent stabilized';
     title = "r-squared = 0.1797; p = 0.00082"
     lineX = [0.05, 0.425];
     lineY = [0.109965, 0.440025];
@@ -66,7 +66,7 @@ function setModalWithStyle(graphStyle){
   $('#graph-' + identifier).prop('checked', true);
 }
 
-$(document).ready(function(){
+$(function(){
 
   var geojson;
   var map;
@@ -152,7 +152,7 @@ $(document).ready(function(){
 
   function onEachFeature(feature, layer) {
     layer.on({
-        mouseover: highlightFeature,
+        mouseover: function(){ console.log(feature); },
         mouseout: resetHighlight,
         click: zoomToFeature
     });
