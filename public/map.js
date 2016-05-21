@@ -92,12 +92,12 @@ $(function(){
       if (layerStyle === 'complaints'){
        return d > 0.30 ? "#08306b" :
               d > 0.25 ? "#08519c" :
-              d > 0.18 ? "#4292c6" :
-              d > 0.15 ? "#6baed6" :
-              d > 0.12 ? "#9ecae1" :
-              d > 0.09 ? "#c6dbef" :
-              d > 0.06 ? "#deebf7" :
-              d > 0.03 ? "#f7fbff" : "#ffffff";
+              d > 0.18 ? "#2171b5" :
+              d > 0.15 ? "#4292c6" :
+              d > 0.12 ? "#6baed6" :
+              d > 0.09 ? "#9ecae1" :
+              d > 0.06 ? "#c6dbef" :
+              d > 0.03 ? "#deebf7" : "#f7fbff";
       } else if (layerStyle === 'income'){
         return d > 100000 ? "#00441b" :
                d > 90000  ? "#006d2c" :
@@ -159,7 +159,7 @@ $(function(){
   }
 
   function addComplaintsLegend(map){
-    addLegendWithGrades([0, 0.07, 0.095, 0.12, 0.145, 0.17, 0.195, 0.22, 0.245]);
+    addLegendWithGrades([0, 0.03, 0.06, 0.09, 0.12, 0.15, 0.18, 0.25, 0.3]);
   }
 
   function addIncomeLegend(map){
